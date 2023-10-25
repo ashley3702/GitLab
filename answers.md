@@ -53,12 +53,18 @@ git checkout test
 git merge top_N
 ```
 
+Test branch is changed to reflect the changes made in process_movie_data.py in top_N branch, while top_N 
+branch stays the same
+
 6. What do you think would happen if you ran the following commands?
 What branches would change, and how?
 ```
 git checkout top_ten
 git merge test
 ```
+
+Top_ten branch is changed so that the file quiz.md is renamed to answers.md from the test branch, while the 
+test branch stays the same
 
 7. What do you think would happen if you ran the following commands?
 What branches would change, and how?
@@ -67,3 +73,7 @@ git checkout test
 git rebase top_ten
 git rebase top_N
 ```
+
+Merge conflict occurs because of competing line changes in process_movie_data.py, requires action to specify 
+which lines to keep. 
+Then, changes process_movie_data.py in test to reflect those changes.
