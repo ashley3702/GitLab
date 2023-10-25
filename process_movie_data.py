@@ -3,12 +3,14 @@
 import csv
 
 
-def find_top_N(filename, n=5):
+def find_top_N(filename, n=10):
     """Finds the top N highest grossing movies in a CSV dataset.
+
        Input: filename, a string - points to filename of dataset
        Input: n, an int - number of top movies to find
        Output: None
        Effect: should print N lines of text
+
     """
     # read in file contents as list of dictionaries
     with open(filename) as f:
@@ -36,4 +38,4 @@ def find_top_N(filename, n=5):
 # Movie data comes from "Movie Gross and Ratings" dataset on Kaggle by Yashwanth Sharaf
 # https://www.kaggle.com/datasets/thedevastator/movie-gross-and-ratings-from-1989-to-2014
 if __name__ == "__main__":
-    find_top_N("Movies_gross_rating.csv", 5)
+    find_top_N("Movies_gross_rating.csv", 10)
